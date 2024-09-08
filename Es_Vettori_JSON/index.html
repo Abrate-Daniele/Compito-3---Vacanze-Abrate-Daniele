@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ferramenta</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Lista magazzino Ferramenta</h1>
+            </header>
+            <section id="sezForm">
+                <fieldset>
+                    <legend>Aggiungi/Modifica</legend>
+                    <label for="articolo">Articolo:</label>
+                    <input type="text" id="articolo">
+                    <br>
+                    <label for="qta">Quantità:</label>
+                    <input type="text" id="qta">
+                    <br>
+                    <button onclick="aggiungi()">Aggiungi/Modifica</button>
+                </fieldset>
+            </section>
+            <section id="sezRicerca">
+                <fieldset>
+                    <legend>Ricerca</legend>
+                    <label for="ricerca">Cerca:</label>
+                    <input type="text" id="ricerca" onkeyup="cerca()">
+                </fieldset>
+            </section>
+            <section id="sezOrdina">
+                <fieldset>
+                    <legend>Ordina Lista</legend>
+                    <button onclick="ordinaNome()">Ordine alfabetico</button>
+                    <button onclick="ordinaPerQta()">Ordine per quantità (ordine crescente)</button>
+                </fieldset>
+            </section>
+            <section id="sezLista">
+                <table id="tabLista">
+                    <thead>
+                        <tr>
+                            <th>Articolo</th>
+                            <th>Quantità</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoLista">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>Creato da Abrate Daniele</footer>
+    </body>
+</html>
